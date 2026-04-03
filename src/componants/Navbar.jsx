@@ -14,7 +14,7 @@ function Navbar() {
           />
           <h1
             className="
-  text-2xl md:text-2xl
+  text-lg md:text-2xl
   font-extrabold
   cursor-pointer
  bg-gradient-to-r from-[#A50044] to-[#004D98]
@@ -24,7 +24,7 @@ function Navbar() {
   hover:scale-105 hover:brightness-110
 "
           >
-            FC Barça
+            FC Barçelona
           </h1>
         </div>
         <div className="flex-none">
