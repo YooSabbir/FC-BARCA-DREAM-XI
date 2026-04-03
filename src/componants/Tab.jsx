@@ -4,13 +4,13 @@ const Tab = () => {
   return (
     <div className="flex flex-col md:flex-row justify-between items-center w-11/12 mx-auto py-3 space-y-3 md:space-y-0">
       <div className="text-2xl font-bold text-[#004D98] select-none text-center md:text-left">
-        Available Players
+        Available Players :
       </div>
 
       <div
         role="tablist"
         aria-label="Player selection tabs"
-        className="flex flex-col sm:flex-row rounded-md bg-gradient-to-r from-[#A50044] via-[#7A164B] to-[#004D98] shadow-lg w-full sm:w-auto"
+        className="flex flex-col sm:flex-row rounded-md  shadow-lg w-full sm:w-auto"
       >
         <a
           role="tab"

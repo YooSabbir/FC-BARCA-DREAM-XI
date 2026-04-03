@@ -1,0 +1,186 @@
+[
+  {
+    "player_name": "Ferran Torres",
+    "player_country": "Spain",
+    "player_type": "Forward",
+    "rating": 84,
+    "player_img": "https://i.ibb.co.com/svSL5MnN/07-Ferran-Torres.webp",
+    "price": "$40,000,000"
+  },
+  {
+    "player_name": "Robert Lewandowski",
+    "player_country": "Poland",
+    "player_type": "Forward",
+    "rating": 92,
+    "player_img": "https://i.ibb.co.com/FqhKr1Kn/09-Lewandowski.webp",
+    "price": "$30,000,000"
+  },
+  {
+    "player_name": "Lamine Yamal",
+    "player_country": "Spain",
+    "player_type": "Forward",
+    "rating": 88,
+    "player_img": "https://i.ibb.co.com/sdQKjncJ/10-Lamine.webp",
+    "price": "$120,000,000"
+  },
+  {
+    "player_name": "Raphinha",
+    "player_country": "Brazil",
+    "player_type": "Forward",
+    "rating": 87,
+    "player_img": "https://i.ibb.co.com/tMJMskc2/11-Raphinha.webp",
+    "price": "$60,000,000"
+  },
+  {
+    "player_name": "Marcus Rashford",
+    "player_country": "England",
+    "player_type": "Forward",
+    "rating": 89,
+    "player_img": "https://i.ibb.co.com/7xWc2QNr/14-Rashford.webp",
+    "price": "$85,000,000"
+  },
+  {
+    "player_name": "Roony Bardghji",
+    "player_country": "Sweden",
+    "player_type": "Forward",
+    "rating": 82,
+    "player_img": "https://i.ibb.co.com/RGJmhBKc/28-Bardghji.webp",
+    "price": "$20,000,000"
+  },
+  {
+    "player_name": "Gavi",
+    "player_country": "Spain",
+    "player_type": "Midfielder",
+    "rating": 89,
+    "player_img": "https://i.ibb.co.com/PZ18BhGR/06-Gavi.webp",
+    "price": "$90,000,000"
+  },
+  {
+    "player_name": "Pedri",
+    "player_country": "Spain",
+    "player_type": "Midfielder",
+    "rating": 91,
+    "player_img": "https://i.ibb.co.com/qL6hj0m1/08-Pedri.webp",
+    "price": "$100,000,000"
+  },
+  {
+    "player_name": "Fermin Lopez",
+    "player_country": "Spain",
+    "player_type": "Midfielder",
+    "rating": 84,
+    "player_img": "https://i.ibb.co.com/fdhctRMG/16-Fermin.webp",
+    "price": "$30,000,000"
+  },
+  {
+    "player_name": "Marc Casado",
+    "player_country": "Spain",
+    "player_type": "Midfielder",
+    "rating": 80,
+    "player_img": "https://i.ibb.co.com/zhjwhc5r/17-Casado.webp",
+    "price": "$8,000,000"
+  },
+  {
+    "player_name": "Dani Olmo",
+    "player_country": "Spain",
+    "player_type": "Midfielder",
+    "rating": 88,
+    "player_img": "https://i.ibb.co.com/Kcf4wKhh/20-Olmo.webp",
+    "price": "$60,000,000"
+  },
+  {
+    "player_name": "Frenkie de Jong",
+    "player_country": "Netherlands",
+    "player_type": "Midfielder",
+    "rating": 90,
+    "player_img": "https://i.ibb.co.com/ZzXBfv6K/21-De-Jong.webp",
+    "price": "$80,000,000"
+  },
+  {
+    "player_name": "Marc Bernal",
+    "player_country": "Spain",
+    "player_type": "Midfielder",
+    "rating": 82,
+    "player_img": "https://i.ibb.co.com/7xcQJmcb/22-Bernal.webp",
+    "price": "$15,000,000"
+  },
+  {
+    "player_name": "Joao Cancelo",
+    "player_country": "Portugal",
+    "player_type": "Defender",
+    "rating": 88,
+    "player_img": "https://i.ibb.co.com/BK3NCLTN/00-Cancelo.webp",
+    "price": "$50,000,000"
+  },
+  {
+    "player_name": "Alejandro Balde",
+    "player_country": "Spain",
+    "player_type": "Defender",
+    "rating": 87,
+    "player_img": "https://i.ibb.co.com/nq7jNfSQ/03-Balde.webp",
+    "price": "$65,000,000"
+  },
+  {
+    "player_name": "Ronald Araujo",
+    "player_country": "Uruguay",
+    "player_type": "Defender",
+    "rating": 91,
+    "player_img": "https://i.ibb.co.com/b5wbg9Pt/04-Araujo.webp",
+    "price": "$85,000,000"
+  },
+  {
+    "player_name": "Pau Cubarsi",
+    "player_country": "Spain",
+    "player_type": "Defender",
+    "rating": 87,
+    "player_img": "https://i.ibb.co.com/cc0B6Kjs/02-Cubarsi.webp",
+    "price": "$60,000,000"
+  },
+  {
+    "player_name": "Andreas Christensen",
+    "player_country": "Denmark",
+    "player_type": "Defender",
+    "rating": 86,
+    "player_img": "https://i.ibb.co.com/1J8BnnXn/15-Christensen.webp",
+    "price": "$40,000,000"
+  },
+  {
+    "player_name": "Gerard Martin",
+    "player_country": "Spain",
+    "player_type": "Defender",
+    "rating": 78,
+    "player_img": "https://i.ibb.co.com/tpZsKCkw/18-Martin.webp",
+    "price": "$5,000,000"
+  },
+  {
+    "player_name": "Jules Kounde",
+    "player_country": "France",
+    "player_type": "Defender",
+    "rating": 88,
+    "player_img": "https://i.ibb.co.com/bMjhYTrP/23-Kounde.webp",
+    "price": "$70,000,000"
+  },
+  {
+    "player_name": "Eric Garcia",
+    "player_country": "Spain",
+    "player_type": "Defender",
+    "rating": 83,
+    "player_img": "https://i.ibb.co.com/Sws4MZcQ/24-Eric-Garcia.webp",
+    "price": "$20,000,000"
+  },
+  {
+    "player_name": "Joan Garcia",
+    "player_country": "Spain",
+    "player_type": "Goalkeeper",
+    "rating": 80,
+    "player_img": "https://i.ibb.co.com/ccb7nFNm/01-Joan-Garcia.webp",
+    "price": "$10,000,000"
+  },
+  {
+    "player_name": "Wojciech Szczesny",
+    "player_country": "Poland",
+    "player_type": "Goalkeeper",
+    "rating": 86,
+    "player_img": "https://i.ibb.co.com/Cpxzqfhw/25-Szczesny.webp",
+    "price": "$6,000,000"
+  }
+]
