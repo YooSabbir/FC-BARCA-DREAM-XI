@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-      <Navbar coin={coin}/>
+      <Navbar coin={coin} />
       <Banner />
       <Tab selectedType={selectedType} setSelectedType={setSelectedType} />
       {selectedType === "Avialable" ? (
@@ -32,7 +32,13 @@ function App() {
           setCoin={setCoin}
         />
       ) : (
-        <Selected />
+        <Selected
+          playerPromise={playerPromise}
+          selectedPlayers={selectedPlayers}
+          setSelectedPlayers={setSelectedPlayers}
+          coin={coin}
+          setCoin={setCoin}
+        />
       )}
       <Footer />
     </>
