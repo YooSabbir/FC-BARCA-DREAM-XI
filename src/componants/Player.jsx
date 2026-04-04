@@ -1,4 +1,5 @@
 import React, { use } from "react";
+import { toast } from "react-toastify";
 
 const Player = ({
   playerPromise,
@@ -14,7 +15,19 @@ const Player = ({
     const coinNumber = parseInt(coin.replace(/[$,]/g, ""), 10);
 
     if (coinNumber < priceNumber) {
-      alert("No more coin left!");
+      toast.error("Not enough coins to sign this player!", {
+        position: "top-center",
+        autoClose: 1500,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        theme: "dark",
+        className:
+          "bg-black text-white border border-red-900/40 text-[12px] font-bold tracking-wider py-2 min-h-0",
+        progressClassName: "bg-[#A50044]",
+        icon: "⚠️",
+      });
       return;
     }
 
@@ -27,6 +40,35 @@ const Player = ({
       setSelectedPlayers((prev) => [...prev, player]);
       setCoin("$ " + (coinNumber - priceNumber).toLocaleString());
     }
+
+    const addPlayerPromise = new Promise((resolve) => setTimeout(resolve, 820));
+
+    toast.promise(
+      addPlayerPromise,
+      {
+        pending: {
+          render: "Player adding to the squad...",
+          className:
+            "bg-black text-white border border-gray-800 text-[13px] font-bold tracking-wider py-2 min-h-0",
+        },
+        success: {
+          render: `${player.player_name} added to squad`,
+          className:
+            "bg-black text-white border border-blue-900/40 text-[13px] font-bold tracking-wider py-2 min-h-0",
+          icon: "✔️",
+        },
+        error: "Failed to add player ❌",
+      },
+      {
+        position: "bottom-left",
+        autoClose: 1000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        theme: "dark",
+      },
+    );
   };
 
   return (
@@ -65,9 +107,7 @@ const Player = ({
                       ? "bg-blue-500/20 text-blue-500 border border-blue-500/30"
                       : player.player_type === "Defender"
                         ? "bg-purple-500/20 text-purple-500 border border-purple-500/30"
-                        : player.player_type === "Goalkeeper"
-                          ? "bg-yellow-500/20 text-yellow-500 border border-yellow-500/30"
-                          : "bg-gray-500/20 text-gray-500 border border-gray-500/30"
+                        : "bg-yellow-500/20 text-yellow-500 border border-yellow-500/30"
                 }`}
               >
                 {player.player_type}
@@ -87,43 +127,31 @@ const Player = ({
                   onClick={() => handleSelect(player)}
                   disabled={selectedPlayers.includes(player)}
                   className={`p-2 rounded-sm transition-all duration-100 flex items-center justify-center cursor-pointer
-                  ${
-                    selectedPlayers.includes(player)
-                      ? "bg-green-500"
-                      : "bg-[#004D98]"
-                  }`}
+                  ${selectedPlayers.includes(player) ? "bg-green-500" : "bg-[#004D98]"}`}
                 >
-                  {selectedPlayers.includes(player) ? (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5 text-white"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    {selectedPlayers.includes(player) ? (
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={3}
                         d="M5 13l4 4L19 7"
                       />
-                    </svg>
-                  ) : (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5 text-white"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
+                    ) : (
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
                         d="M12 4v16m8-8H4"
                       />
-                    </svg>
-                  )}
+                    )}
+                  </svg>
                 </button>
               </div>
             </div>

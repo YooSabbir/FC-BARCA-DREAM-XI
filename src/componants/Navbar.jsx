@@ -43,7 +43,6 @@ function Navbar({ coin }) {
             </a>
 
             <button className="flex items-center gap-1 px-1 py-1 font-semibold text-sm text-center">
-
               <img src={dollarimg} alt="coin" className="w-4 h-4" />
               <span className="text-yellow-500 font-bold">{coin}</span>
             </button>
