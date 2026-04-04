@@ -16,17 +16,11 @@ const playerPromise = fetchPlayer();
 function App() {
   const [selectedType, setSelectedType] = useState("Avialable");
   const [selectedPlayers, setSelectedPlayers] = useState([]);
-  const handleSelect = (index) => {
-    if (selectedPlayers.includes(index)) {
-      setSelectedPlayers(selectedPlayers.filter((i) => i !== index));
-    } else {
-      setSelectedPlayers([...selectedPlayers, index]);
-    }
-  };
+  const [coin, setCoin] = useState("$ 1,000,000,000");
 
   return (
     <>
-      <Navbar />
+      <Navbar coin={coin}/>
       <Banner />
       <Tab selectedType={selectedType} setSelectedType={setSelectedType} />
       {selectedType === "Avialable" ? (
@@ -34,7 +28,8 @@ function App() {
           playerPromise={playerPromise}
           selectedPlayers={selectedPlayers}
           setSelectedPlayers={setSelectedPlayers}
-          handleSelect={handleSelect}
+          coin={coin}
+          setCoin={setCoin}
         />
       ) : (
         <Selected />

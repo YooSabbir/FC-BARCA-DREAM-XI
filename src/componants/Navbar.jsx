@@ -2,7 +2,7 @@ import React from "react";
 import dollarimg from "../assets/Currency.png";
 import logo from "../assets/barcalogoo.png";
 
-function Navbar() {
+function Navbar({ coin }) {
   return (
     <div className=" sticky top-0 z-50 bg-white">
       <div className="navbar w-11/12 mx-auto">
@@ -14,7 +14,7 @@ function Navbar() {
           />
           <h1
             className="
-  text-lg md:text-2xl
+  text-[19px] md:text-2xl
   font-extrabold
   cursor-pointer
  bg-gradient-to-r from-[#A50044] to-[#004D98]
@@ -42,9 +42,10 @@ function Navbar() {
               Schedules
             </a>
 
-            <button className="flex items-center gap-1 px-3 py-1 font-semibold">
-              <span>0 coin</span>
-              <img src={dollarimg} alt="" className="w-4 h-4" />
+            <button className="flex items-center gap-1 px-1 py-1 font-semibold text-sm text-center">
+
+              <img src={dollarimg} alt="coin" className="w-4 h-4" />
+              <span className="text-yellow-500 font-bold">{coin}</span>
             </button>
           </div>
         </div>

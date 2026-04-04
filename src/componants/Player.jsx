@@ -1,14 +1,38 @@
 import React, { use } from "react";
 
-const Player = ({ playerPromise, selectedPlayers, handleSelect }) => {
+const Player = ({
+  playerPromise,
+  selectedPlayers,
+  setSelectedPlayers,
+  coin,
+  setCoin,
+}) => {
   const data = use(playerPromise);
 
   return (
     <div className="px-2 py-4 mx-auto max-w-[90%] md:container md:py-8">
       <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center cursor-pointer">
         {data.map((player, index) => {
-          const isSelected = selectedPlayers.includes(index);
 
+          const isSelected = selectedPlayers.includes(index);
+          const handleSelect = (index) => {
+            const priceNumber = parseInt(player.price.replace(/[$,]/g, ""), 10);
+            const coinNumber = parseInt(coin.replace(/[$,]/g, ""), 10);
+            const result = coinNumber - priceNumber;
+
+            if (result < 0) {
+              alert("No more coin left!");
+              return;
+            }
+
+            setCoin("$ " + result.toLocaleString());
+
+            if (selectedPlayers.includes(index)) {
+              setSelectedPlayers(selectedPlayers.filter((i) => i !== index));
+            } else {
+              setSelectedPlayers([...selectedPlayers, index]);
+            }
+          };
           return (
             <div
               key={index}
@@ -61,7 +85,9 @@ const Player = ({ playerPromise, selectedPlayers, handleSelect }) => {
                   </div>
 
                   <button
-                    onClick={() => handleSelect(index)}
+                    onClick={() => {
+                      handleSelect(index);
+                    }}
                     disabled={isSelected}
                     className={`p-2 rounded-sm transition-all duration-100 flex items-center justify-center cursor-pointer
                       ${isSelected ? "bg-green-500 " : "bg-[#004D98]"}`}
